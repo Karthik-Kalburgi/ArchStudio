@@ -11,6 +11,11 @@ import {
   HiOutlineHeart
 } from "react-icons/hi";
 import { FiArrowRight, FiPhone } from "react-icons/fi";
+import About from "./About";
+import Services from "./Services";
+import Packages from "./Packages";
+import Projects from "./Projects";
+import Contact from "./Contact";
 
 const Home = () => {
   const [currentStats, setCurrentStats] = useState({
@@ -109,6 +114,7 @@ const Home = () => {
   ];
 
   return (
+    <>
     <section 
       className="min-h-screen flex items-center justify-center relative overflow-hidden"
       style={{ backgroundColor: "#F5F5F5" }}
@@ -267,8 +273,8 @@ const Home = () => {
                 e.currentTarget.style.transform = "translateY(0)";
               }}
             >
-              <FiPhone size={20} />
-              Get In Touch
+              <FiPhone size={20}   />
+              Get In Touch 
             </motion.button>
           </motion.div>
 
@@ -369,7 +375,18 @@ const Home = () => {
           ease: "easeInOut"
         }}
       />
+    
     </section>
+    <div>
+      <About />
+      <Services />
+      <Projects />
+      <Packages />
+      <Contact />
+
+    </div>
+    </>
+
   );
 };
 
