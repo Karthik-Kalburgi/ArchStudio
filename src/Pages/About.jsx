@@ -1,4 +1,3 @@
-// About.jsx
 import React from "react";
 import { motion } from "framer-motion";
 
@@ -101,7 +100,7 @@ const About = () => {
           {/* Service Cards */}
           <motion.div
             variants={containerVariants}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
           >
             {serviceCards.map((card, i) => (
               <motion.div
@@ -139,7 +138,7 @@ const About = () => {
           {/* Mission & Vision */}
           <motion.div
             variants={containerVariants}
-            className="grid grid-cols-1 lg:grid-cols-2 gap-12"
+            className="grid grid-cols-1 sm:grid-cols-2 gap-12"
           >
             {missionVision.map((block, i) => (
               <motion.div

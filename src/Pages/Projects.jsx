@@ -1,4 +1,3 @@
-// Projects.jsx
 import React from "react";
 import { motion } from "framer-motion";
 
@@ -84,7 +83,7 @@ export default function Projects() {
                       src={img}
                       alt={proj.title}
                       key={i}
-                      className="h-64 w-80 object-cover rounded-2xl mb-2 flex-shrink-0"
+                      className="h-64 w-full object-cover rounded-2xl mb-2 flex-shrink-0"
                     />
                   ))}
                 </div>

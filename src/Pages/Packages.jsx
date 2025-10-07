@@ -1,4 +1,3 @@
-// Packages.jsx
 import React from "react";
 import { motion } from "framer-motion";
 
@@ -98,7 +97,11 @@ export default function Packages() {
           <motion.div
             key={idx}
             variants={cardVariants}
-            whileHover={{ y: -8, boxShadow: "0 10px 30px rgba(0,0,0,0.1)" }}
+            whileHover={{
+              y: -8,
+              boxShadow: "0 10px 30px rgba(0,0,0,0.1)",
+              transition: { duration: 0.3 }
+            }}
             className={`rounded-2xl overflow-hidden border ${pkg.borderColor} ${pkg.bgColor} transition-shadow duration-300`}
           >
             <div className="p-8 space-y-6">
@@ -146,7 +149,7 @@ export default function Packages() {
                     className="flex items-center"
                     style={{ fontFamily: "'Inter', sans-serif" }}
                   >
-                    <span className={`inline-block w-4 h-4 mr-2 ${pkg.textColor}`}>
+                    <span className={`inline-block w-4 h-4 mr-2 ${pkg.textColor}`} aria-hidden="true">
                       ✔
                     </span>
                     {feat}
@@ -156,6 +159,7 @@ export default function Packages() {
               <button
                 className={`mt-6 w-full py-3 rounded-lg text-white ${pkg.buttonColor} font-semibold`}
                 style={{ fontFamily: "'Inter', sans-serif" }}
+                aria-label={`Get started with the ${pkg.name} package`}
               >
                 Get Started →
               </button>

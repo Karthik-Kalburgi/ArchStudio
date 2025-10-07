@@ -1,4 +1,3 @@
-// Contact.jsx
 import React from "react";
 
 const flaticon = {
@@ -39,38 +38,47 @@ export default function Contact() {
               Send Us a Message
             </h3>
             <div className="mb-6">
-              <label className="block mb-2 font-medium" style={{ fontFamily: "'Inter', sans-serif", color: "#222" }}>Your Name</label>
+              <label className="block mb-2 font-medium" style={{ fontFamily: "'Inter', sans-serif", color: "#222" }}>
+                Your Name
+              </label>
               <input
                 type="text"
                 className="w-full py-3 px-4 rounded-lg bg-[#F5F8FF] border border-gray-200 focus:border-[#6A7FDB] focus:outline-none"
                 placeholder="Enter your name"
                 required
+                aria-label="Your Name"
                 style={{ fontFamily: "'Inter', sans-serif" }}
               />
             </div>
             <div className="mb-6">
-              <label className="block mb-2 font-medium" style={{ fontFamily: "'Inter', sans-serif", color: "#222" }}>Your Email</label>
+              <label className="block mb-2 font-medium" style={{ fontFamily: "'Inter', sans-serif", color: "#222" }}>
+                Your Email
+              </label>
               <input
                 type="email"
                 className="w-full py-3 px-4 rounded-lg bg-[#F5F8FF] border border-gray-200 focus:border-[#6A7FDB] focus:outline-none"
                 placeholder="Enter your email"
                 required
+                aria-label="Your Email"
                 style={{ fontFamily: "'Inter', sans-serif" }}
               />
             </div>
             <div className="mb-8">
-              <label className="block mb-2 font-medium" style={{ fontFamily: "'Inter', sans-serif', color: '#222'" }}>Your Message</label>
+              <label className="block mb-2 font-medium" style={{ fontFamily: "'Inter', sans-serif', color: '#222'" }}>
+                Your Message
+              </label>
               <textarea
                 rows={5}
                 className="w-full py-3 px-4 rounded-lg bg-[#F5F8FF] border border-gray-200 focus:border-[#6A7FDB] focus:outline-none"
                 placeholder="How can we help you?"
                 required
+                aria-label="Your Message"
                 style={{ fontFamily: "'Inter', sans-serif" }}
               ></textarea>
             </div>
             <button
               type="submit"
-              className="w-full py-3 rounded-lg font-semibold text-white bg-[#6A7FDB] hover:bg-[#5563c1] transition"
+              className="w-full py-3 rounded-lg font-semibold text-white bg-[#6A7FDB] hover:bg-[#5563c1] transition transform hover:scale-105"
               style={{ fontFamily: "'Inter', sans-serif", fontSize: 18 }}
             >
               Send Message

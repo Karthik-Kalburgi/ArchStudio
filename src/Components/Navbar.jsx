@@ -15,9 +15,7 @@ function Navbar() {
 
   return (
     <nav
-      className={`fixed w-full top-0 left-0 z-50 transition-colors duration-500 ${
-        navbarBg ? "shadow-lg" : ""
-      }`}
+      className={`fixed w-full top-0 left-0 z-50 transition-colors duration-500 ${navbarBg ? "shadow-lg" : ""}`}
       style={{
         backgroundColor: navbarBg ? "#F5F5F5" : "transparent",
       }}

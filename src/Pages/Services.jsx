@@ -1,4 +1,3 @@
-// Services.jsx
 import React from "react";
 import { motion } from "framer-motion";
 
@@ -160,7 +159,7 @@ export default function Services() {
                 className="w-14 h-14 mb-4 flex items-center justify-center rounded-full bg-[#6A7FDB]/10"
                 aria-hidden="true"
               >
-                <img src={svc.icon} alt="" className="w-8 h-8" />
+                <img src={svc.icon} alt={svc.title} className="w-8 h-8" />
               </div>
               <h3
                 className="text-2xl font-semibold mb-2"

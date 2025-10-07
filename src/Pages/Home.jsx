@@ -30,10 +30,10 @@ const Home = () => {
   // Animated counters for statistics
   useEffect(() => {
     const targetStats = {
-      projects: 247,  // Creative anagram of 742
-      clients: 156,   // Creative anagram of 651  
-      awards: 29,     // Creative anagram of 92
-      experience: 15  // Years of experience
+      projects: 247,
+      clients: 156,
+      awards: 29,
+      experience: 15
     };
 
     const animateCounters = async () => {
@@ -143,7 +143,7 @@ const Home = () => {
               ease: "easeInOut"
             }}
           >
-            <Icon size={80} style={{ color: "#6A7FDB" }} />
+            <Icon size={80} style={{ color: "#6A7FDB" }} aria-label="Floating Icon" />
           </motion.div>
         ))}
       </div>
@@ -244,149 +244,61 @@ const Home = () => {
               }}
             >
               Explore Projects
-              <motion.div
-                animate={{ x: [0, 5, 0] }}
-                transition={{ duration: 1.5, repeat: Infinity }}
-              >
-                <FiArrowRight size={20} />
-              </motion.div>
+              <FiArrowRight />
             </motion.button>
-
             <motion.button
               variants={buttonVariants}
               whileHover="hover"
               whileTap="tap"
-              className="group px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-3 transition-all duration-300"
-              style={{
-                border: "2px solid #6A7FDB",
-                color: "#6A7FDB",
-                backgroundColor: "transparent"
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = "#6A7FDB";
-                e.currentTarget.style.color = "#FFFFFF";
-                e.currentTarget.style.transform = "translateY(-2px)";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = "transparent";
-                e.currentTarget.style.color = "#6A7FDB";
-                e.currentTarget.style.transform = "translateY(0)";
-              }}
+              className="group px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-3 border-2 border-[#6A7FDB] text-[#6A7FDB] transition-all duration-300"
             >
-              <FiPhone size={20}   />
-              Get In Touch 
+              Get In Touch
+              <FiPhone />
             </motion.button>
-          </motion.div>
-
-          {/* Statistics Section */}
-          <motion.div 
-            variants={textVariants}
-            className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-16 max-w-4xl mx-auto"
-          >
-            {[
-              { 
-                icon: HiOutlineTrendingUp, 
-                number: currentStats.projects, 
-                label: "Projects Completed",
-                suffix: "+"
-              },
-              { 
-                icon: HiOutlineUsers, 
-                number: currentStats.clients, 
-                label: "Happy Clients",
-                suffix: "+"
-              },
-              { 
-                icon: HiOutlineSparkles, 
-                number: currentStats.awards, 
-                label: "Design Awards",
-                suffix: ""
-              },
-              { 
-                icon: HiOutlineOfficeBuilding, 
-                number: currentStats.experience, 
-                label: "Years Experience",
-                suffix: "+"
-              }
-            ].map((stat, index) => (
-              <motion.div
-                key={index}
-                variants={iconVariants}
-                className="text-center space-y-3"
-                whileHover={{ 
-                  scale: 1.05,
-                  transition: { duration: 0.2 }
-                }}
-              >
-                <motion.div 
-                  className="mx-auto w-16 h-16 rounded-full flex items-center justify-center"
-                  style={{ backgroundColor: "rgba(106, 127, 219, 0.1)" }}
-                  whileHover={{ 
-                    backgroundColor: "rgba(106, 127, 219, 0.2)",
-                    rotate: 360 
-                  }}
-                  transition={{ duration: 0.6 }}
-                >
-                  <stat.icon size={28} style={{ color: "#6A7FDB" }} />
-                </motion.div>
-                <div>
-                  <motion.div 
-                    className="text-3xl md:text-4xl font-bold"
-                    style={{ color: "#333333" }}
-                  >
-                    {stat.number}{stat.suffix}
-                  </motion.div>
-                  <div 
-                    className="text-sm md:text-base font-medium"
-                    style={{ color: "#666666" }}
-                  >
-                    {stat.label}
-                  </div>
-                </div>
-              </motion.div>
-            ))}
           </motion.div>
         </motion.div>
       </div>
-
-      {/* Geometric Decoration */}
-      <motion.div
-        className="absolute bottom-10 right-10 w-32 h-32 border-2 opacity-10"
-        style={{ borderColor: "#6A7FDB" }}
-        animate={{
-          rotate: 360,
-        }}
-        transition={{
-          duration: 20,
-          repeat: Infinity,
-          ease: "linear"
-        }}
-      />
-      
-      <motion.div
-        className="absolute top-20 left-10 w-20 h-20 rounded-full border-2 opacity-10"
-        style={{ borderColor: "#6A7FDB" }}
-        animate={{
-          scale: [1, 1.2, 1],
-        }}
-        transition={{
-          duration: 3,
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
-      />
-    
     </section>
-    <div>
-      <About />
-      <Services />
-      <Projects />
-      <Packages />
-      <Contact />
 
-    </div>
+    {/* Statistics Section */}
+    <section className="py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-10 text-center">
+          <motion.div className="stat-item">
+            <motion.h3 className="text-3xl font-semibold" style={{ color: "#6A7FDB" }}>
+              {currentStats.projects}
+            </motion.h3>
+            <motion.p>Projects Completed</motion.p>
+          </motion.div>
+          <motion.div className="stat-item">
+            <motion.h3 className="text-3xl font-semibold" style={{ color: "#6A7FDB" }}>
+              {currentStats.clients}
+            </motion.h3>
+            <motion.p>Happy Clients</motion.p>
+          </motion.div>
+          <motion.div className="stat-item">
+            <motion.h3 className="text-3xl font-semibold" style={{ color: "#6A7FDB" }}>
+              {currentStats.awards}
+            </motion.h3>
+            <motion.p>Awards Won</motion.p>
+          </motion.div>
+          <motion.div className="stat-item">
+            <motion.h3 className="text-3xl font-semibold" style={{ color: "#6A7FDB" }}>
+              {currentStats.experience}+
+            </motion.h3>
+            <motion.p>Years of Experience</motion.p>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+
+    {/* About, Services, Packages, Projects, Contact Sections */}
+    <About />
+    <Services />
+    <Packages />
+    <Projects />
+    <Contact />
     </>
-
   );
 };
 
