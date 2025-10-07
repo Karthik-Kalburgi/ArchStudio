@@ -1,4 +1,3 @@
-// Navbar.jsx
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 
@@ -19,13 +18,12 @@ function Navbar() {
       className={`fixed w-full top-0 left-0 z-50 transition-colors duration-500 ${
         navbarBg ? "shadow-lg" : ""
       }`}
-      style={{ backgroundColor: navbarBg ? "#F5F5F5" : "transparent" }}
+      style={{
+        backgroundColor: navbarBg ? "#F5F5F5" : "transparent",
+      }}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between h-16">
-        <div
-          className="text-xl font-bold cursor-pointer"
-          style={{ color: "#6A7FDB" }}
-        >
+        <div className="text-xl font-bold cursor-pointer" style={{ color: "#6A7FDB" }}>
           ArchStudio
         </div>
 
